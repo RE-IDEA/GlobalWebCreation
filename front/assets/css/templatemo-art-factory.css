@@ -875,7 +875,6 @@ TRY IT ... with or without CENTER CENTER
 
 @media (max-width: 765px) {
   .welcome-area {
-    margin-bottom: 100px;
     padding: 100px 0; /* 上下に100pxの余白を追加 */
     display: flex;
     align-items: center;
@@ -906,6 +905,16 @@ TRY IT ... with or without CENTER CENTER
   }
 }
 
+@media (max-width: 500px) {
+  .welcome-area {
+    padding: 50px 0; /* 上下に100pxの余白を追加 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
 /*
 ---------------------------------------------
@@ -1565,7 +1574,7 @@ highlights
 --------------------------------------------- 
 */
 #highlights {
-  padding-top: 130px;
+  padding-top: 70px;
   padding-bottom: 130px;
   background-image: url(../images/highlights-bg.png);
 }
@@ -1688,6 +1697,73 @@ highlights
   transition: all 0.5s;
 }
 
+h3.highlights-top {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  height: 60px; /* 高さを調整 */
+  padding-inline: 30px; /* 内側の余白を調整 */
+  background: rgba(0, 136, 232, 1);
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, rgba(0, 136, 232, 1)),
+    color-stop(0%, rgba(0, 182, 198, 1)),
+    color-stop(100%, rgba(0, 136, 232, 1))
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0088e8', endColorstr='#0088e8', GradientType=1 );
+
+  border-radius: 30px; /* ボーダーの半径を調整 */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px; /* フォントサイズを40pxに設定 */
+  font-weight: 700;
+  line-height: calc(50 / 40); /* 行の高さを調整 */
+  letter-spacing: .04em;
+  color: #fff;
+}
+
+
+.section-heading{
+  padding-bottom: 40px;
+}
+
+
 @media (max-width: 992px) {
   .highlights-item {
     margin-bottom: 45px;
@@ -1795,18 +1871,60 @@ h1.top-shape {
 
 @media (max-width: 991px) {
   .do-top h1 {
-    font-size: 30px; /* 画面幅が991px以下の場合のフォントサイズ */
+    font-size: 45px; /* フォントサイズを45pxに縮小 */
+    margin-bottom: 50px; /* 下の余白を少し減らす */
   }
   
   .do-top h2 {
-      font-size: 28px; /* 小さい画面での見出しのフォントサイズを調整 */
+    font-size: 28px; /* フォントサイズを28pxに縮小 */
+    margin-bottom: 20px; /* 下の余白を維持 */
   }
 
   .do-top p {
-      font-size: 14px; /* 小さい画面での説明文のフォントサイズを調整 */
-      margin-bottom: 30px; /* 小さい画面での説明文の下の余白を調整 */
+    font-size: 20px; /* フォントサイズを20pxに縮小 */
+    line-height: 30px; /* 行間を30pxに縮小 */
+    margin-bottom: 50px; /* 下の余白を少し減らす */
   }
 }
+
+
+@media (max-width: 765px) {
+  .do-top h1 {
+    font-size: 30px; /* フォントサイズを30pxに縮小 */
+    margin-bottom: 40px; /* 下の余白をさらに減らす */
+  }
+  
+  .do-top h2 {
+    font-size: 24px; /* フォントサイズを24pxに縮小 */
+    margin-bottom: 15px; /* 下の余白を少し減らす */
+  }
+
+  .do-top p {
+    font-size: 16px; /* フォントサイズを16pxに縮小 */
+    line-height: 25px; /* 行間を25pxに縮小 */
+    margin-bottom: 30px; /* 下の余白をさらに減らす */
+  }
+}
+
+@media (max-width: 500px) {
+  .do-top h1 {
+    font-size: 20px; /* フォントサイズを20pxに縮小 */
+    margin-bottom: 25px; /* 下の余白をさらに減らす */
+  }
+  
+  .do-top h2 {
+    font-size: 18px; /* フォントサイズを18pxに縮小 */
+    margin-bottom: 10px; /* 下の余白をさらに減らす */
+  }
+
+  .do-top p {
+    font-size: 10px; /* フォントサイズを12pxに縮小 */
+    line-height: 16px; /* 行間を18pxに縮小 */
+    margin-bottom: 14px; /* 下の余白をさらに減らす */
+  }
+}
+
+
 
 
 .do-item {
