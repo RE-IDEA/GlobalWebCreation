@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  lp_backend:
+    build: .
+    container_name: RE-IDEA_LP_backend
+    hostname: RE-IDEA_LP_backend
+    tty: true
+    ports:
+      - '5001:5001'
