@@ -968,6 +968,7 @@ about
   align-self: center;
 }
 
+/* デフォルト設定 (スクリーン幅が991px以上) */
 #about h3,
 #about2 h3,
 #about3 h3 {
@@ -998,6 +999,79 @@ about
   line-height: 30px;
   letter-spacing: 0.5px;
 }
+
+/* スクリーン幅が991px以下の場合 */
+@media (max-width: 991px) {
+  #about h3,
+  #about2 h3,
+  #about3 h3 {
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  #about h5,
+  #about2 h5,
+  #about3 h5 {
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  #about p,
+  #about2 p,
+  #about3 p {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+
+/* スクリーン幅が765px以下の場合 */
+@media (max-width: 765px) {
+  #about h3,
+  #about2 h3,
+  #about3 h3 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  #about h5,
+  #about2 h5,
+  #about3 h5 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  #about p,
+  #about2 p,
+  #about3 p {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+/* スクリーン幅が500px以下の場合 */
+@media (max-width: 500px) {
+  #about h3,
+  #about2 h3,
+  #about3 h3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  #about h5,
+  #about2 h5,
+  #about3 h5 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  #about p,
+  #about2 p,
+  #about3 p {
+    font-size: 13px;
+    line-height: 24px;
+  }
+}
+
 
 #about3 ul li img{
   display: inline;
@@ -1215,7 +1289,61 @@ accordions
 
 #frequently-question .section-heading p {
   margin-bottom: 80px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color:#000;
+  line-height: 30px;
+  letter-spacing: 0.5px;
 }
+
+#frequently-question .section-heading h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgba(0, 136, 232, 1);
+  color: -moz-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  color: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, rgba(0, 136, 232, 1)),
+    color-stop(0%, rgba(0, 182, 198, 1)),
+    color-stop(100%, rgba(0, 136, 232, 1))
+  );
+  color: -webkit-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  color: -o-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  color: -ms-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  color: linear-gradient(
+    135deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0088e8', endColorstr='#0088e8', GradientType=1 );
+
+  line-height: 40px;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
 
 #frequently-question .left-text {
   align-self: center !important;
@@ -1231,8 +1359,10 @@ accordions
 }
 
 #frequently-question .left-text p {
+  margin-bottom: 80px;
   margin-bottom: 30px;
   font-size: 16px;
+  color:#000;
   line-height: 30px;
   letter-spacing: 0.5px;
 }
@@ -1263,11 +1393,13 @@ accordions
   cursor: pointer;
   transition: color 200ms ease-in-out;
   border-bottom: 1px solid #fff;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .accordion-head {
     padding: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 700;
   }
 }
 .accordion-head .icon {
@@ -1291,6 +1423,114 @@ accordions
   padding: 20px;
   padding-top: 0;
 }
+
+/* スクリーン幅が991px以下の場合 */
+@media (max-width: 991px) {
+  #frequently-question {
+    padding: 90px 0px; /* パディングを縮小 */
+  }
+
+  #frequently-question .section-heading h2 {
+    font-size: 36px; /* セクションタイトルのフォントサイズを縮小 */
+    line-height: 36px;
+  }
+
+  #frequently-question .section-heading p,
+  #frequently-question .left-text p {
+    font-size: 15px; /* pのフォントサイズを縮小 */
+    line-height: 28px;
+  }
+
+  #frequently-question .left-text h5 {
+    font-size: 24px; /* h5のフォントサイズを縮小 */
+    line-height: 36px;
+  }
+
+  .accordion-head {
+    padding: 15px; /* アコーディオンヘッドのパディングを縮小 */
+    font-size: 18px; /* アコーディオンヘッドのフォントサイズを縮小 */
+  }
+
+  .accordion-body > .content {
+    padding: 15px; /* アコーディオンボディのコンテンツパディングを縮小 */
+  }
+}
+
+/* スクリーン幅が765px以下の場合 */
+@media (max-width: 765px) {
+  #frequently-question {
+    padding: 70px 0px; /* パディングをさらに縮小 */
+  }
+
+  #frequently-question .section-heading h2 {
+    font-size: 32px; /* セクションタイトルのフォントサイズをさらに縮小 */
+    line-height: 32px;
+  }
+
+  #frequently-question .section-heading p,
+  #frequently-question .left-text p {
+    font-size: 14px; /* pのフォントサイズをさらに縮小 */
+    line-height: 26px;
+  }
+
+  #frequently-question .left-text h5 {
+    font-size: 22px; /* h5のフォントサイズをさらに縮小 */
+    line-height: 34px;
+  }
+
+  .accordion-head {
+    padding: 12px; /* アコーディオンヘッドのパディングをさらに縮小 */
+    font-size: 14px; /* アコーディオンヘッドのフォントサイズをさらに縮小 */
+  }
+
+  .accordion-body > .content {
+    padding: 12px; /* アコーディオンボディのコンテンツパディングをさらに縮小 */
+  }
+}
+
+/* スクリーン幅が500px以下の場合 */
+@media (max-width: 500px) {
+  #frequently-question {
+    padding: 50px 0px; /* パディングをさらに縮小 */
+  }
+
+  #frequently-question .section-heading h2 {
+    font-size: 28px; /* セクションタイトルのフォントサイズをさらに縮小 */
+    line-height: 28px;
+  }
+
+  #frequently-question .section-heading p,
+  #frequently-question .left-text p {
+    font-size: 13px; /* pのフォントサイズをさらに縮小 */
+    line-height: 24px;
+  }
+
+  #frequently-question .left-text h5 {
+    font-size: 20px; /* h5のフォントサイズをさらに縮小 */
+    line-height: 32px;
+  }
+
+  .accordion-head {
+    padding: 12px; /* アコーディオンヘッドのパディングをさらに縮小 */
+    font-size: 13.5px; /* アコーディオンヘッドのフォントサイズをさらに縮小 */
+  }
+
+  .accordion-body > .content {
+    padding: 10px; /* アコーディオンボディのコンテンツパディングをさらに縮小 */
+  }
+}
+
+@media (max-width: 400px) {
+  #frequently-question {
+    padding: 50px 0px; /* パディングをさらに縮小 */
+  }
+
+  #frequently-question .section-heading  p{
+    font-size: 11px; /* セクションタイトルのフォントサイズをさらに縮小 */
+    line-height: 20px;
+  } 
+}
+
 
 /* 
 ---------------------------------------------
@@ -1763,6 +2003,100 @@ h3.highlights-top {
   padding-bottom: 40px;
 }
 
+@media (max-width: 991px) {
+  #highlights .highlights-item h4 {
+    font-size: 18px; /* h4のフォントサイズを縮小 */
+    line-height: 28px;
+  }
+
+  #highlights .highlights-item p {
+    font-size: 14px; /* pのフォントサイズを縮小 */
+    line-height: 24px;
+  }
+
+  .highlights-item .number h6 {
+    font-size: 26px; /* 番号のフォントサイズを縮小 */
+  }
+
+  h3.highlights-top {
+    font-size: 28px; /* セクションタイトルのフォントサイズを縮小 */
+    line-height: calc(40 / 28);
+    height: 50px; /* タイトルバーの高さを縮小 */
+  }
+}
+
+/* スクリーン幅が765px以下の場合 */
+@media (max-width: 765px) {
+  #highlights .highlights-item h4 {
+    font-size: 16px; /* h4のフォントサイズをさらに縮小 */
+    line-height: 26px;
+  }
+
+  #highlights .highlights-item p {
+    font-size: 13px; /* pのフォントサイズをさらに縮小 */
+    line-height: 22px;
+  }
+
+  .highlights-item .number h6 {
+    font-size: 24px; /* 番号のフォントサイズをさらに縮小 */
+  }
+
+  h3.highlights-top {
+    font-size: 26px; /* セクションタイトルのフォントサイズをさらに縮小 */
+    line-height: calc(38 / 26);
+    height: 45px; /* タイトルバーの高さをさらに縮小 */
+  }
+}
+
+/* スクリーン幅が500px以下の場合 */
+@media (max-width: 500px) {
+  #highlights .highlights-item h4 {
+    font-size: 14px; /* h4のフォントサイズをさらに縮小 */
+    line-height: 24px;
+  }
+
+  #highlights .highlights-item p {
+    font-size: 12px; /* pのフォントサイズをさらに縮小 */
+    line-height: 20px;
+  }
+
+  .highlights-item .number h6 {
+    font-size: 22px; /* 番号のフォントサイズをさらに縮小 */
+  }
+
+  h3.highlights-top {
+    font-size: 24px; /* セクションタイトルのフォントサイズをさらに縮小 */
+    line-height: calc(34 / 24);
+    height: 40px; /* タイトルバーの高さをさらに縮小 */
+  }
+}
+
+/* スクリーン幅が991px以下の場合 */
+@media (max-width: 991px) {
+  .highlights .highlights-content {
+    margin: 30px 10px 0px 10px; /* 外枠のマージンを縮小 */
+    padding: 20px; /* 内側の余白を調整 */
+    border-radius: 40px; /* 角の丸みを縮小 */
+  }
+}
+
+/* スクリーン幅が765px以下の場合 */
+@media (max-width: 765px) {
+  .highlights .highlights-content {
+    margin: 20px 5px 0px 5px; /* 外枠のマージンをさらに縮小 */
+    padding: 15px; /* 内側の余白をさらに調整 */
+    border-radius: 30px; /* 角の丸みをさらに縮小 */
+  }
+}
+
+/* スクリーン幅が500px以下の場合 */
+@media (max-width: 500px) {
+  .highlights .highlights-content {
+    margin: 15px 0px 0px 0px; /* 外枠のマージンをさらに縮小 */
+    padding: 10px; /* 内側の余白をさらに調整 */
+    border-radius: 20px; /* 角の丸みをさらに縮小 */
+  }
+}
 
 @media (max-width: 992px) {
   .highlights-item {
