@@ -610,8 +610,8 @@
                                             body: JSON.stringify({name: name, email:email, message:message})
                                         })
                                         .then(response => {
-                                            if(response.status === 200) alert('送信が完了しました。');
-                                            else alert('送信中にエラーが発生しました。');
+                                            if(response.status === 200) alert('メール送信が完了しました。');
+                                            else alert('メール送信中にエラーが発生しました。');
                                         })
                                     });
                                 } else {
