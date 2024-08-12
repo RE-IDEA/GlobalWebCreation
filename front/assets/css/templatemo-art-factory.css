@@ -204,6 +204,15 @@ body {
   border-radius: 50%;
 }
 
+@media (max-width: 500px){
+  col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
 .highlight {
   color: #ff0000; /* ここで希望の色を指定します */
 }
@@ -875,7 +884,6 @@ TRY IT ... with or without CENTER CENTER
 
 @media (max-width: 765px) {
   .welcome-area {
-    margin-bottom: 100px;
     padding: 100px 0; /* 上下に100pxの余白を追加 */
     display: flex;
     align-items: center;
@@ -906,6 +914,16 @@ TRY IT ... with or without CENTER CENTER
   }
 }
 
+@media (max-width: 500px) {
+  .welcome-area {
+    padding: 50px 0; /* 上下に100pxの余白を追加 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
 /*
 ---------------------------------------------
@@ -914,7 +932,7 @@ about
 */
 
 #about{
-  padding: 120px 100px 120px 0px;
+  padding: 120px 0px;
   border-bottom: 1px solid #eee;
 }
 
@@ -959,6 +977,7 @@ about
   align-self: center;
 }
 
+/* デフォルト設定 (スクリーン幅が991px以上) */
 #about h3,
 #about2 h3,
 #about3 h3 {
@@ -990,6 +1009,79 @@ about
   letter-spacing: 0.5px;
 }
 
+/* スクリーン幅が991px以下の場合 */
+@media (max-width: 991px) {
+  #about h3,
+  #about2 h3,
+  #about3 h3 {
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  #about h5,
+  #about2 h5,
+  #about3 h5 {
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  #about p,
+  #about2 p,
+  #about3 p {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+
+/* スクリーン幅が765px以下の場合 */
+@media (max-width: 765px) {
+  #about h3,
+  #about2 h3,
+  #about3 h3 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  #about h5,
+  #about2 h5,
+  #about3 h5 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  #about p,
+  #about2 p,
+  #about3 p {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+/* スクリーン幅が500px以下の場合 */
+@media (max-width: 500px) {
+  #about h3,
+  #about2 h3,
+  #about3 h3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  #about h5,
+  #about2 h5,
+  #about3 h5 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  #about p,
+  #about2 p,
+  #about3 p {
+    font-size: 13px;
+    line-height: 24px;
+  }
+}
+
+
 #about3 ul li img{
   display: inline;
   float: left;
@@ -1007,6 +1099,15 @@ about
   margin-bottom: 20px;
 }
 
+@media (max-width: 991px) {
+  #about .row,
+  #about2 .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 /* 
 ---------------------------------------------
 services
@@ -1206,7 +1307,61 @@ accordions
 
 #frequently-question .section-heading p {
   margin-bottom: 80px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color:#000;
+  line-height: 30px;
+  letter-spacing: 0.5px;
 }
+
+#frequently-question .section-heading h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgba(0, 136, 232, 1);
+  color: -moz-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  color: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, rgba(0, 136, 232, 1)),
+    color-stop(0%, rgba(0, 182, 198, 1)),
+    color-stop(100%, rgba(0, 136, 232, 1))
+  );
+  color: -webkit-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  color: -o-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  color: -ms-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  color: linear-gradient(
+    135deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0088e8', endColorstr='#0088e8', GradientType=1 );
+
+  line-height: 40px;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
 
 #frequently-question .left-text {
   align-self: center !important;
@@ -1222,8 +1377,10 @@ accordions
 }
 
 #frequently-question .left-text p {
+  margin-bottom: 80px;
   margin-bottom: 30px;
   font-size: 16px;
+  color:#000;
   line-height: 30px;
   letter-spacing: 0.5px;
 }
@@ -1254,11 +1411,13 @@ accordions
   cursor: pointer;
   transition: color 200ms ease-in-out;
   border-bottom: 1px solid #fff;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .accordion-head {
     padding: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 700;
   }
 }
 .accordion-head .icon {
@@ -1282,6 +1441,114 @@ accordions
   padding: 20px;
   padding-top: 0;
 }
+
+/* スクリーン幅が991px以下の場合 */
+@media (max-width: 991px) {
+  #frequently-question {
+    padding: 90px 0px; /* パディングを縮小 */
+  }
+
+  #frequently-question .section-heading h2 {
+    font-size: 36px; /* セクションタイトルのフォントサイズを縮小 */
+    line-height: 36px;
+  }
+
+  #frequently-question .section-heading p,
+  #frequently-question .left-text p {
+    font-size: 15px; /* pのフォントサイズを縮小 */
+    line-height: 28px;
+  }
+
+  #frequently-question .left-text h5 {
+    font-size: 24px; /* h5のフォントサイズを縮小 */
+    line-height: 36px;
+  }
+
+  .accordion-head {
+    padding: 15px; /* アコーディオンヘッドのパディングを縮小 */
+    font-size: 18px; /* アコーディオンヘッドのフォントサイズを縮小 */
+  }
+
+  .accordion-body > .content {
+    padding: 15px; /* アコーディオンボディのコンテンツパディングを縮小 */
+  }
+}
+
+/* スクリーン幅が765px以下の場合 */
+@media (max-width: 765px) {
+  #frequently-question {
+    padding: 70px 0px; /* パディングをさらに縮小 */
+  }
+
+  #frequently-question .section-heading h2 {
+    font-size: 32px; /* セクションタイトルのフォントサイズをさらに縮小 */
+    line-height: 32px;
+  }
+
+  #frequently-question .section-heading p,
+  #frequently-question .left-text p {
+    font-size: 14px; /* pのフォントサイズをさらに縮小 */
+    line-height: 26px;
+  }
+
+  #frequently-question .left-text h5 {
+    font-size: 22px; /* h5のフォントサイズをさらに縮小 */
+    line-height: 34px;
+  }
+
+  .accordion-head {
+    padding: 12px; /* アコーディオンヘッドのパディングをさらに縮小 */
+    font-size: 14px; /* アコーディオンヘッドのフォントサイズをさらに縮小 */
+  }
+
+  .accordion-body > .content {
+    padding: 12px; /* アコーディオンボディのコンテンツパディングをさらに縮小 */
+  }
+}
+
+/* スクリーン幅が500px以下の場合 */
+@media (max-width: 500px) {
+  #frequently-question {
+    padding: 50px 0px; /* パディングをさらに縮小 */
+  }
+
+  #frequently-question .section-heading h2 {
+    font-size: 28px; /* セクションタイトルのフォントサイズをさらに縮小 */
+    line-height: 28px;
+  }
+
+  #frequently-question .section-heading p,
+  #frequently-question .left-text p {
+    font-size: 13px; /* pのフォントサイズをさらに縮小 */
+    line-height: 24px;
+  }
+
+  #frequently-question .left-text h5 {
+    font-size: 20px; /* h5のフォントサイズをさらに縮小 */
+    line-height: 32px;
+  }
+
+  .accordion-head {
+    padding: 12px; /* アコーディオンヘッドのパディングをさらに縮小 */
+    font-size: 13.5px; /* アコーディオンヘッドのフォントサイズをさらに縮小 */
+  }
+
+  .accordion-body > .content {
+    padding: 10px; /* アコーディオンボディのコンテンツパディングをさらに縮小 */
+  }
+}
+
+@media (max-width: 400px) {
+  #frequently-question {
+    padding: 50px 0px; /* パディングをさらに縮小 */
+  }
+
+  #frequently-question .section-heading  p{
+    font-size: 11px; /* セクションタイトルのフォントサイズをさらに縮小 */
+    line-height: 20px;
+  } 
+}
+
 
 /* 
 ---------------------------------------------
@@ -1565,7 +1832,7 @@ highlights
 --------------------------------------------- 
 */
 #highlights {
-  padding-top: 130px;
+  padding-top: 70px;
   padding-bottom: 130px;
   background-image: url(../images/highlights-bg.png);
 }
@@ -1616,6 +1883,14 @@ highlights
   background-image: url(../images/highlights-icon-white-02.png);
 }
 
+.third-highlight:hover .icon {
+  background-image: url(../images/highlights-icon-white-03.png);
+}
+
+.fourth-highlight:hover .icon {
+  background-image: url(../images/highlights-icon-white-04.png);
+}
+
 .highlights-item .number h6 {
   background-repeat: no-repeat;
   width: 110px;
@@ -1655,6 +1930,14 @@ highlights
   background-image: url(../images/highlights-icon-black-02.png);
 }
 
+.third-highlight .icon {
+  background-image: url(../images/highlights-icon-black-03.png);
+}
+
+.fourth-highlight .icon {
+  background-image: url(../images/highlights-icon-black-04.png);
+}
+
 .highlights-item .icon {
   width: 63px;
   height: 63px;
@@ -1686,6 +1969,167 @@ highlights
   position: relative;
   margin-top: 0px;
   transition: all 0.5s;
+}
+
+h3.highlights-top {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  height: 60px; /* 高さを調整 */
+  padding-inline: 30px; /* 内側の余白を調整 */
+  background: rgba(0, 136, 232, 1);
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, rgba(0, 136, 232, 1)),
+    color-stop(0%, rgba(0, 182, 198, 1)),
+    color-stop(100%, rgba(0, 136, 232, 1))
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    -45deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(0, 136, 232, 1) 0%,
+    rgba(0, 182, 198, 1) 0%,
+    rgba(0, 136, 232, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0088e8', endColorstr='#0088e8', GradientType=1 );
+
+  border-radius: 30px; /* ボーダーの半径を調整 */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px; /* フォントサイズを40pxに設定 */
+  font-weight: 700;
+  line-height: calc(50 / 40); /* 行の高さを調整 */
+  letter-spacing: .04em;
+  color: #fff;
+}
+
+
+.section-heading{
+  padding-bottom: 40px;
+}
+
+@media (max-width: 991px) {
+  #highlights .highlights-item h4 {
+    font-size: 18px; /* h4のフォントサイズを縮小 */
+    line-height: 28px;
+  }
+
+  #highlights .highlights-item p {
+    font-size: 14px; /* pのフォントサイズを縮小 */
+    line-height: 24px;
+  }
+
+  .highlights-item .number h6 {
+    font-size: 26px; /* 番号のフォントサイズを縮小 */
+  }
+
+  h3.highlights-top {
+    font-size: 28px; /* セクションタイトルのフォントサイズを縮小 */
+    line-height: calc(40 / 28);
+    height: 50px; /* タイトルバーの高さを縮小 */
+  }
+}
+
+/* スクリーン幅が765px以下の場合 */
+@media (max-width: 765px) {
+  #highlights .highlights-item h4 {
+    font-size: 16px; /* h4のフォントサイズをさらに縮小 */
+    line-height: 26px;
+  }
+
+  #highlights .highlights-item p {
+    font-size: 13px; /* pのフォントサイズをさらに縮小 */
+    line-height: 22px;
+  }
+
+  .highlights-item .number h6 {
+    font-size: 24px; /* 番号のフォントサイズをさらに縮小 */
+  }
+
+  h3.highlights-top {
+    font-size: 26px; /* セクションタイトルのフォントサイズをさらに縮小 */
+    line-height: calc(38 / 26);
+    height: 45px; /* タイトルバーの高さをさらに縮小 */
+  }
+}
+
+/* スクリーン幅が500px以下の場合 */
+@media (max-width: 500px) {
+  #highlights .highlights-item h4 {
+    font-size: 14px; /* h4のフォントサイズをさらに縮小 */
+    line-height: 24px;
+  }
+
+  #highlights .highlights-item p {
+    font-size: 12px; /* pのフォントサイズをさらに縮小 */
+    line-height: 20px;
+  }
+
+  .highlights-item .number h6 {
+    font-size: 22px; /* 番号のフォントサイズをさらに縮小 */
+  }
+
+  h3.highlights-top {
+    font-size: 24px; /* セクションタイトルのフォントサイズをさらに縮小 */
+    line-height: calc(34 / 24);
+    height: 40px; /* タイトルバーの高さをさらに縮小 */
+  }
+}
+
+/* スクリーン幅が991px以下の場合 */
+@media (max-width: 991px) {
+  .highlights .highlights-content {
+    margin: 30px 10px 0px 10px; /* 外枠のマージンを縮小 */
+    padding: 20px; /* 内側の余白を調整 */
+    border-radius: 40px; /* 角の丸みを縮小 */
+  }
+}
+
+/* スクリーン幅が765px以下の場合 */
+@media (max-width: 765px) {
+  .highlights .highlights-content {
+    margin: 20px 5px 0px 5px; /* 外枠のマージンをさらに縮小 */
+    padding: 15px; /* 内側の余白をさらに調整 */
+    border-radius: 30px; /* 角の丸みをさらに縮小 */
+  }
+}
+
+/* スクリーン幅が500px以下の場合 */
+@media (max-width: 500px) {
+  .highlights .highlights-content {
+    margin: 15px 0px 0px 0px; /* 外枠のマージンをさらに縮小 */
+    padding: 10px; /* 内側の余白をさらに調整 */
+    border-radius: 20px; /* 角の丸みをさらに縮小 */
+  }
 }
 
 @media (max-width: 992px) {
@@ -1795,18 +2239,60 @@ h1.top-shape {
 
 @media (max-width: 991px) {
   .do-top h1 {
-    font-size: 30px; /* 画面幅が991px以下の場合のフォントサイズ */
+    font-size: 45px; /* フォントサイズを45pxに縮小 */
+    margin-bottom: 50px; /* 下の余白を少し減らす */
   }
   
   .do-top h2 {
-      font-size: 28px; /* 小さい画面での見出しのフォントサイズを調整 */
+    font-size: 28px; /* フォントサイズを28pxに縮小 */
+    margin-bottom: 20px; /* 下の余白を維持 */
   }
 
   .do-top p {
-      font-size: 14px; /* 小さい画面での説明文のフォントサイズを調整 */
-      margin-bottom: 30px; /* 小さい画面での説明文の下の余白を調整 */
+    font-size: 20px; /* フォントサイズを20pxに縮小 */
+    line-height: 30px; /* 行間を30pxに縮小 */
+    margin-bottom: 50px; /* 下の余白を少し減らす */
   }
 }
+
+
+@media (max-width: 765px) {
+  .do-top h1 {
+    font-size: 30px; /* フォントサイズを30pxに縮小 */
+    margin-bottom: 40px; /* 下の余白をさらに減らす */
+  }
+  
+  .do-top h2 {
+    font-size: 24px; /* フォントサイズを24pxに縮小 */
+    margin-bottom: 15px; /* 下の余白を少し減らす */
+  }
+
+  .do-top p {
+    font-size: 16px; /* フォントサイズを16pxに縮小 */
+    line-height: 25px; /* 行間を25pxに縮小 */
+    margin-bottom: 30px; /* 下の余白をさらに減らす */
+  }
+}
+
+@media (max-width: 500px) {
+  .do-top h1 {
+    font-size: 20px; /* フォントサイズを20pxに縮小 */
+    margin-bottom: 25px; /* 下の余白をさらに減らす */
+  }
+  
+  .do-top h2 {
+    font-size: 18px; /* フォントサイズを18pxに縮小 */
+    margin-bottom: 10px; /* 下の余白をさらに減らす */
+  }
+
+  .do-top p {
+    font-size: 12px; /* フォントサイズを12pxに縮小 */
+    line-height: 18px; /* 行間を18pxに縮小 */
+    margin-bottom: 16px; /* 下の余白をさらに減らす */
+  }
+}
+
+
 
 
 .do-item {
