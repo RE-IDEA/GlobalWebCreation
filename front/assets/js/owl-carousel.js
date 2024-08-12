@@ -185,7 +185,7 @@
 	 */
 	Owl.Defaults = {
 		items: 3,
-		loop: false,
+		loop: true,
 		center: false,
 		rewind: false,
 		checkVisibility: true,
@@ -2648,7 +2648,7 @@
 		 * Indicates whenever the autoplay is paused.
 		 * @type {Boolean}
 		 */
-		this._paused = true;
+		this._paused = false;
 
 		/**
 		 * All event handlers.
@@ -2718,10 +2718,10 @@
 	 * @public
 	 */
 	Autoplay.Defaults = {
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 5000,
-		autoplayHoverPause: false,
-		autoplaySpeed: false
+		autoplayHoverPause: true,
+		autoplaySpeed: 600
 	};
 
 	/**
