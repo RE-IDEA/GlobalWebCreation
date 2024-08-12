@@ -7,7 +7,7 @@ const nodemailer = require('nodemailer');
 const app = express();
 const port = 5000;
 // CORSミドルウェアを適用
-app.use(cors({origin:[  "https://www.global-webcreation.com", "https://global-webcreation.com", ]}));
+app.use(cors({origin:[ "https://www.global-webcreation.com", "https://global-webcreation.com", ]}));
 // app.use(cors());
 // これCORSエラー対策
 app.use(express.json())
@@ -32,7 +32,7 @@ const append = async (name, email, message) => {
     try {
         await sheets.spreadsheets.values.append({
             spreadsheetId: `1BrxvVxJbYZIw-SKoMzK_5buRIvcyB8_zfCZZQLr_c5w`, //シートのIDを指定
-            range: `海外向けサイト!A:H`, //書き込む範囲を指定
+            range: `海外日本進出!A:H`, //書き込む範囲を指定
             valueInputOption: 'RAW',
             requestBody: { 
                 values: [ 
