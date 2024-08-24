@@ -1111,7 +1111,7 @@ about
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    
   }
 }
 /* 
@@ -1850,7 +1850,11 @@ highlights
   border-radius: 50px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
   margin: 50px 0px 0px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+
 
 .highlights-item {
   text-align: center;
@@ -1863,6 +1867,13 @@ highlights
   -o-transition: background-color .5s;
   -moz-transition: background-color .5s;
   min-height: 500px;
+  display: inline-block;
+}
+
+@media (max-width: 991px) {
+  .highlights-item {
+    min-height: 0;
+  }
 }
 
 .highlights-item:hover {
@@ -2283,19 +2294,37 @@ h1.top-shape {
 
 @media (max-width: 500px) {
   .do-top h1 {
+    font-size: 24px; /* フォントサイズを20pxに縮小 */
+    margin-bottom: 25px; /* 下の余白をさらに減らす */
+  }
+  
+  .do-top h2 {
+    font-size: 20px; /* フォントサイズを18pxに縮小 */
+    margin-bottom: 15px; /* 下の余白をさらに減らす */
+  }
+
+  .do-top p {
+    font-size: 16px; /* フォントサイズを12pxに縮小 */
+    line-height: 25px; /* 行間を18pxに縮小 */
+    margin-bottom: 30px; /* 下の余白をさらに減らす */
+  }
+}
+
+@media (max-width: 385px) {
+  .do-top h1 {
     font-size: 20px; /* フォントサイズを20pxに縮小 */
     margin-bottom: 25px; /* 下の余白をさらに減らす */
   }
   
   .do-top h2 {
     font-size: 18px; /* フォントサイズを18pxに縮小 */
-    margin-bottom: 10px; /* 下の余白をさらに減らす */
+    margin-bottom: 15px; /* 下の余白をさらに減らす */
   }
 
   .do-top p {
     font-size: 12px; /* フォントサイズを12pxに縮小 */
     line-height: 18px; /* 行間を18pxに縮小 */
-    margin-bottom: 16px; /* 下の余白をさらに減らす */
+    margin-bottom: 25px; /* 下の余白をさらに減らす */
   }
 }
 
@@ -2310,12 +2339,12 @@ h1.top-shape {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   position: relative;
-  height: 500px;
+  height: 400px;
 }
 
 @media screen and (max-width: 920px) {
   .do-item {
-    margin: 0px 30px !important;
+    margin: 0px 40px !important;
   }
 }
 
@@ -2370,6 +2399,7 @@ h1.top-shape {
   line-height: 25px;
   position: relative;
   z-index: 2;
+  text-align: left;
 }
 
 .do-item a.main-button {
@@ -2377,11 +2407,23 @@ h1.top-shape {
   display: inline-block;
 }
 
+.break-on-small{
+  display: block;
+}
+
+.break-1{
+  display: none;
+}
+
+.bold-on{
+  font-weight: normal;
+}
+
 /* 1501px以上 */
 @media screen and (min-width: 1501px) {
   .do-item {
-    padding: 50px 35px;
-    height: 500px;
+    padding: 50px 30px;
+    height: 400px;
   }
 
   .do-item .do-title {
@@ -2433,7 +2475,7 @@ h1.top-shape {
 @media screen and (max-width: 1200px) and (min-width: 991px) {
   .do-item {
     padding: 35px 25px;
-    height: 350px;
+    height: 370px;
   }
 
   .do-item .do-title {
@@ -2441,7 +2483,7 @@ h1.top-shape {
   }
 
   .do-item p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .do-item .icon {
@@ -2458,8 +2500,8 @@ h1.top-shape {
 /* 765px - 990px */
 @media screen and (max-width: 990px) and (min-width: 765px) {
   .do-item {
-    padding: 30px 20px;
-    height: 500px;
+    padding: 30px 38px;
+    height: 350px;
   }
 
   .do-item .do-title {
@@ -2467,7 +2509,7 @@ h1.top-shape {
   }
 
   .do-item p {
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .do-item .icon {
@@ -2514,16 +2556,16 @@ h1.top-shape {
 /* 500px以下 */
 @media screen and (max-width: 500px) {
   .do-item {
-    padding: 20px 10px;
-    height: 250px;
+    padding: 20px 40px;
+    height: 300px;
   }
 
   .do-item .do-title {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .do-item p {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .do-item .icon {
@@ -2535,6 +2577,73 @@ h1.top-shape {
   .do-item .icon img {
     max-width: 22px;
   }
+
+  .break-on-small{
+    display: none;
+  }
+
+  .break-1{
+    display: block;
+  }
+
+  .bold-on{
+    font-weight: bold;
+  }
+  
+}
+
+@media screen and (max-width: 380px) {
+  .do-item {
+    padding: 20px 40px;
+    height: 330px;
+  }
+
+  .do-item .do-title {
+    font-size: 20px;
+  }
+
+  .do-item p {
+    font-size: 12px;
+  }
+
+  .do-item .icon {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  .do-item .icon img {
+    max-width: 22px;
+  }  
+}
+
+@media screen and (max-width: 361px) {
+  .do-item {
+    padding: 20px 20px;
+    height: 300px;
+  }
+
+  .do-item .do-title {
+    font-size: 20px;
+  }
+
+  .do-item p {
+    font-size: 12px;
+  }
+
+  .do-item .icon {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  .do-item .icon img {
+    max-width: 22px;
+  }  
+
+  #do .owl-carousel .owl-dots {
+    margin-top: 20px;
+  }
 }
 
 
@@ -2543,6 +2652,13 @@ h1.top-shape {
   text-align: center;
   align-self: center;
 }
+
+@media screen and (max-width: 500px) {
+  #do .owl-carousel .owl-dots {
+    margin-top: 20px;
+  }
+}
+
 
 #do .owl-carousel button.owl-dot span {
   border-radius: 50%;
