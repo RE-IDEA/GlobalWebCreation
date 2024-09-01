@@ -174,9 +174,17 @@ ul {
 }
 
 p {
-  font-size: 15px;
-  line-height: 25px;
+  font-size: 16px;
+  line-height: 30px;
   color: #4a4a4a;
+}
+
+@media (max-width: 500px) {  
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #4a4a4a;
+  }
 }
 
 /* 
@@ -268,6 +276,7 @@ a.main-button-slider:hover {
 a.main-button {
   font-size: 16px; /* フォントサイズを16pxに設定 */
   border-radius: 25px; /* ボーダー半径を適度に設定 */
+  font-weight: bold;
   padding: 15px 30px;
   background-color: #00b4c6;
   text-transform: uppercase;
@@ -288,6 +297,7 @@ button.main-button {
   border: none;
   cursor: pointer;
   font-size: 16px; /* フォントサイズを16pxに設定 */
+  font-weight: bold;
   border-radius: 25px; /* ボーダー半径を適度に設定 */
   padding: 15px 30px;
   background-color: #f55858;
@@ -304,52 +314,6 @@ button.main-button:hover {
   background-color: #e80000;
 }
 
-@media (max-width: 765px) {
-  a.main-button-slider {
-    font-size: 16px; /* フォントサイズを16pxに設定 */
-    border-radius: 25px; /* ボーダー半径を適度に設定 */
-    padding: 15px 30px; /* パディングを適切に調整 */
-    background-color: #f55858;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: 0.25px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-  }
-
-  a.main-button {
-    font-size: 13px;
-    border-radius: 20px;
-    padding: 12px 20px;
-    background-color: #00b4c6;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: 0.25px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-  }
-
-  button.main-button {
-    outline: none;
-    border: none;
-    cursor: pointer;
-    font-size: 13px;
-    border-radius: 20px;
-    padding: 10px 20px;
-    background-color: #f55858;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: 0.25px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-  }
-}
 
 .section-heading h2 {
   text-align: center;
@@ -811,6 +775,33 @@ TRY IT ... with or without CENTER CENTER
   margin-top: -10vh;
 }
 
+@media (max-width: 1000px) and (max-height: 700px){
+  #welcome {
+    height: 85vh;
+    margin-top: 0vh;
+  }
+}
+
+@media (max-width: 1000px) and (min-height: 701px) and (max-height: 1000px){
+  #welcome {
+    height: 65vh;
+    margin-top: 0vh;
+  }
+}
+
+@media (max-width: 1000px) and (min-height: 1001px){
+  #welcome {
+    height: 55vh;
+    margin-top: 0vh;
+  }
+}
+
+@media (min-width: 1001px) and (min-height: 1001px){
+  #welcome {
+    height: 80vh;
+  }
+}
+
 .welcome-area .header-text {
   position: absolute;
   top: 55%;
@@ -955,6 +946,13 @@ about
   }
 }
 
+@media (max-width: 500px) {
+  #about,
+  #about2 {
+    padding: 20px 0px 60px 0px;
+  }
+}
+
 #about .right-heading{
   text-align: center;
 }
@@ -977,6 +975,12 @@ about
 
 #about3 {
   padding: 120px 0px;
+}
+
+@media (max-width: 500px) {
+  #about3 {
+    padding: 60px 0px;
+  }
 }
 
 #about3 .left-image{
@@ -1082,7 +1086,7 @@ about
   #about p,
   #about2 p,
   #about3 p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 24px;
   }
 }
@@ -1103,6 +1107,12 @@ about
   font-weight: 700;
   color: #1e1e1e;
   margin-bottom: 20px;
+}
+
+@media (max-width: 400px) {
+  #about3 ul li .text h6{
+    font-size: 19px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1312,11 +1322,11 @@ accordions
 }
 
 #frequently-question .section-heading p {
-  margin-bottom: 80px;
+  margin-top: -20px;
   margin-bottom: 30px;
-  font-size: 24px;
+  font-size: 20px;
   color:#000;
-  line-height: 30px;
+  line-height: 34px;
   letter-spacing: 0.5px;
 }
 
@@ -1370,6 +1380,7 @@ accordions
 
 
 #frequently-question .left-text {
+  text-align: center;
   align-self: center !important;
 }
 
@@ -1385,9 +1396,9 @@ accordions
 #frequently-question .left-text p {
   margin-bottom: 80px;
   margin-bottom: 30px;
-  font-size: 16px;
+  font-size: 20px;
   color:#000;
-  line-height: 30px;
+  line-height: 34px;
   letter-spacing: 0.5px;
 }
 
@@ -1448,6 +1459,14 @@ accordions
   padding-top: 0;
 }
 
+.break-2{
+  display: none;
+}
+
+.break-3{
+  display: block;
+}
+
 /* スクリーン幅が991px以下の場合 */
 @media (max-width: 991px) {
   #frequently-question {
@@ -1478,10 +1497,14 @@ accordions
   .accordion-body > .content {
     padding: 15px; /* アコーディオンボディのコンテンツパディングを縮小 */
   }
+
+  .break-2{
+    display: block;
+  }
 }
 
 /* スクリーン幅が765px以下の場合 */
-@media (max-width: 765px) {
+@media (max-width: 767px) {
   #frequently-question {
     padding: 70px 0px; /* パディングをさらに縮小 */
   }
@@ -1497,9 +1520,15 @@ accordions
     line-height: 26px;
   }
 
+  #frequently-question .left-text p {
+    padding-top: 20px;
+  }
+
   #frequently-question .left-text h5 {
-    font-size: 22px; /* h5のフォントサイズをさらに縮小 */
+    padding-top: 70px;
+    font-size: 32px; /* h5のフォントサイズをさらに縮小 */
     line-height: 34px;
+    color: rgba(0, 136, 232, 1);
   }
 
   .accordion-head {
@@ -1509,6 +1538,10 @@ accordions
 
   .accordion-body > .content {
     padding: 12px; /* アコーディオンボディのコンテンツパディングをさらに縮小 */
+  }
+
+  .break-3{
+    display: none;
   }
 }
 
@@ -1525,18 +1558,18 @@ accordions
 
   #frequently-question .section-heading p,
   #frequently-question .left-text p {
-    font-size: 13px; /* pのフォントサイズをさらに縮小 */
+    font-size: 14px; /* pのフォントサイズをさらに縮小 */
     line-height: 24px;
   }
 
   #frequently-question .left-text h5 {
-    font-size: 20px; /* h5のフォントサイズをさらに縮小 */
-    line-height: 32px;
+    font-size: 28px; /* h5のフォントサイズをさらに縮小 */
+    line-height: 28px;
   }
 
   .accordion-head {
     padding: 12px; /* アコーディオンヘッドのパディングをさらに縮小 */
-    font-size: 13.5px; /* アコーディオンヘッドのフォントサイズをさらに縮小 */
+    font-size: 14px; /* アコーディオンヘッドのフォントサイズをさらに縮小 */
   }
 
   .accordion-body > .content {
@@ -1550,10 +1583,19 @@ accordions
   }
 
   #frequently-question .section-heading  p{
-    font-size: 11px; /* セクションタイトルのフォントサイズをさらに縮小 */
-    line-height: 20px;
-  } 
+    font-size: 14px; /* セクションタイトルのフォントサイズをさらに縮小 */
+    line-height: 24px;
+    text-align: left;
+  }
+  
+  #frequently-question .left-text span{
+    font-size: 18px;
+  }
+
+  
 }
+
+
 
 
 /* 
@@ -1987,6 +2029,7 @@ highlights
   position: relative;
   margin-top: 0px;
   transition: all 0.5s;
+  text-align: left;
 }
 
 h3.highlights-top {
@@ -2055,73 +2098,6 @@ h3.highlights-top {
   padding-bottom: 40px;
 }
 
-@media (max-width: 991px) {
-  #highlights .highlights-item h4 {
-    font-size: 18px; /* h4のフォントサイズを縮小 */
-    line-height: 28px;
-  }
-
-  #highlights .highlights-item p {
-    font-size: 14px; /* pのフォントサイズを縮小 */
-    line-height: 24px;
-  }
-
-  .highlights-item .number h6 {
-    font-size: 26px; /* 番号のフォントサイズを縮小 */
-  }
-
-  h3.highlights-top {
-    font-size: 28px; /* セクションタイトルのフォントサイズを縮小 */
-    line-height: calc(40 / 28);
-    height: 50px; /* タイトルバーの高さを縮小 */
-  }
-}
-
-/* スクリーン幅が765px以下の場合 */
-@media (max-width: 765px) {
-  #highlights .highlights-item h4 {
-    font-size: 16px; /* h4のフォントサイズをさらに縮小 */
-    line-height: 26px;
-  }
-
-  #highlights .highlights-item p {
-    font-size: 13px; /* pのフォントサイズをさらに縮小 */
-    line-height: 22px;
-  }
-
-  .highlights-item .number h6 {
-    font-size: 24px; /* 番号のフォントサイズをさらに縮小 */
-  }
-
-  h3.highlights-top {
-    font-size: 26px; /* セクションタイトルのフォントサイズをさらに縮小 */
-    line-height: calc(38 / 26);
-    height: 45px; /* タイトルバーの高さをさらに縮小 */
-  }
-}
-
-/* スクリーン幅が500px以下の場合 */
-@media (max-width: 500px) {
-  #highlights .highlights-item h4 {
-    font-size: 14px; /* h4のフォントサイズをさらに縮小 */
-    line-height: 24px;
-  }
-
-  #highlights .highlights-item p {
-    font-size: 12px; /* pのフォントサイズをさらに縮小 */
-    line-height: 20px;
-  }
-
-  .highlights-item .number h6 {
-    font-size: 22px; /* 番号のフォントサイズをさらに縮小 */
-  }
-
-  h3.highlights-top {
-    font-size: 24px; /* セクションタイトルのフォントサイズをさらに縮小 */
-    line-height: calc(34 / 24);
-    height: 40px; /* タイトルバーの高さをさらに縮小 */
-  }
-}
 
 /* スクリーン幅が991px以下の場合 */
 @media (max-width: 991px) {
@@ -2169,6 +2145,12 @@ do
   position: relative;
   padding: 40px 0px 90px 0px;
   background-color: #f8f8f8;
+}
+
+@media (max-height: 700px) {
+  #do {
+    padding: 0px 0px 90px 0px;
+  }
 }
 
 /* doセクションの見出しと説明文 */
@@ -2393,10 +2375,10 @@ h1.top-shape {
 
 .do-item p {
   font-weight: 400;
-  font-size: 13px;
+  font-size: 16px;
   color: #777;
   letter-spacing: 0.5px;
-  line-height: 25px;
+  line-height: 30px;
   position: relative;
   z-index: 2;
   text-align: left;
@@ -2475,7 +2457,7 @@ h1.top-shape {
 @media screen and (max-width: 1200px) and (min-width: 991px) {
   .do-item {
     padding: 35px 25px;
-    height: 370px;
+    height: 400px;
   }
 
   .do-item .do-title {
@@ -2483,7 +2465,8 @@ h1.top-shape {
   }
 
   .do-item p {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 26px;
   }
 
   .do-item .icon {
@@ -2557,7 +2540,7 @@ h1.top-shape {
 @media screen and (max-width: 500px) {
   .do-item {
     padding: 20px 40px;
-    height: 300px;
+    height: 330px;
   }
 
   .do-item .do-title {
@@ -2565,7 +2548,8 @@ h1.top-shape {
   }
 
   .do-item p {
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 24px;
   }
 
   .do-item .icon {
@@ -2599,7 +2583,7 @@ h1.top-shape {
   }
 
   .do-item .do-title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .do-item p {
