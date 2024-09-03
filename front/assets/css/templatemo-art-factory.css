@@ -23,6 +23,7 @@ Table of contents
 11. footer
 12. preloader
 13. highlights
+14. price
 
 --------------------------------------------- 
 */
@@ -175,7 +176,7 @@ ul {
 
 p {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 26px;
   color: #4a4a4a;
 }
 
@@ -1014,7 +1015,7 @@ about
 #about2 p,
 #about3 p {
   margin-bottom: 30px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 30px;
   letter-spacing: 0.5px;
 }
@@ -1038,8 +1039,8 @@ about
   #about p,
   #about2 p,
   #about3 p {
-    font-size: 15px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 
@@ -1480,8 +1481,8 @@ accordions
 
   #frequently-question .section-heading p,
   #frequently-question .left-text p {
-    font-size: 15px; /* pのフォントサイズを縮小 */
-    line-height: 28px;
+    font-size: 16px; /* pのフォントサイズを縮小 */
+    line-height: 26px;
   }
 
   #frequently-question .left-text h5 {
@@ -2439,7 +2440,7 @@ h1.top-shape {
   }
 
   .do-item p {
-    font-size: 13px;
+    font-size: 18px;
   }
 
   .do-item .icon {
@@ -2484,7 +2485,7 @@ h1.top-shape {
 @media screen and (max-width: 990px) and (min-width: 765px) {
   .do-item {
     padding: 30px 38px;
-    height: 350px;
+    height: 400px;
   }
 
   .do-item .do-title {
@@ -2492,7 +2493,8 @@ h1.top-shape {
   }
 
   .do-item p {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 26px;
   }
 
   .do-item .icon {
@@ -2699,4 +2701,365 @@ h1.top-shape {
   }
 }
 
+/* 
+---------------------------------------------
+price
+--------------------------------------------- 
+*/
 
+#price {
+  padding: 120px 0px;
+  background-color: #f8f8f8;
+}
+
+
+#price h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgba(0, 136, 232, 1);
+  
+  line-height: 40px;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+
+.price-item {
+  padding: 40px 30px;
+  background: #fff;
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border: 2px solid rgba(0, 136, 232, 1);
+}
+
+.price-item:hover .price-content .price-info {
+  margin-left: 30px;
+}
+
+.price-item i {
+  display: block;
+  margin-left: 25px;
+  margin-top: 25px;
+  font-size: 30px;
+  color: #4E47DE;
+  text-align: center;
+}
+
+.price-item {
+  height: 100%;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin-left: 25px;
+  float: left;
+}
+
+.price-item .price-content {
+  text-align: left;
+  overflow: hidden;
+}
+
+.price-item .price-content .price-info {
+  float: left;
+  margin-left: 20px;
+  margin-top: 8px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.price-title{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1.4;
+  padding-bottom: 30px;
+  border-bottom: 2px dashed #ccc;
+}
+
+.price-num{
+  display: flex;
+  gap: 5px;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.price-price{
+  font-size: 80px !important;
+  
+}
+
+.price-item .price-content .price-info .user-name {
+  display: block;
+  font-weight: 400;
+  font-size: 17px;
+  color: #1e1e1e;
+  letter-spacing: 0.25px;
+  margin-bottom: 5px;
+}
+
+.price-item .price-info span {
+  display: block;
+  font-weight: bold;
+  font-size: 30px;
+  color: rgba(0, 136, 232, 1);
+  letter-spacing: 0.25px;
+  text-align: center;
+}
+
+.price-item .price-content p {
+  margin-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #4a4a4a;
+  letter-spacing: 0.6px;
+  line-height: 30px;
+}
+
+@media (max-width: 767px) {
+  #price {
+    padding: 120px 0px;
+    background-color: #f8f8f8;
+  }
+  
+  
+  #price h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: rgba(0, 136, 232, 1);
+    
+    line-height: 40px;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+  }
+  
+  
+  .price-item {
+    padding: 40px 30px;
+    background: #fff;
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border: 2px solid rgba(0, 136, 232, 1);
+  }
+  
+  .price-item:hover .price-content .price-info {
+    margin-left: 30px;
+  }
+  
+  .price-item i {
+    display: block;
+    margin-left: 25px;
+    margin-top: 25px;
+    font-size: 30px;
+    color: #4E47DE;
+    text-align: center;
+  }
+  
+  .price-item {
+    height: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    margin-left: 25px;
+    float: left;
+  }
+  
+  .price-item .price-content {
+    text-align: left;
+    overflow: hidden;
+  }
+  
+  .price-item .price-content .price-info {
+    float: left;
+    margin-left: 20px;
+    margin-top: 8px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .price-title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.4;
+    padding-bottom: 30px;
+    border-bottom: 2px dashed #ccc;
+  }
+  
+  .price-num{
+    display: flex;
+    gap: 5px;
+    align-items: baseline;
+    justify-content: center;
+  }
+  
+  .price-price{
+    font-size: 80px !important;
+    
+  }
+  
+  .price-item .price-content .price-info .user-name {
+    display: block;
+    font-weight: 400;
+    font-size: 17px;
+    color: #1e1e1e;
+    letter-spacing: 0.25px;
+    margin-bottom: 5px;
+  }
+  
+  .price-item .price-info span {
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(0, 136, 232, 1);
+    letter-spacing: 0.25px;
+    text-align: center;
+  }
+  
+  .price-item .price-content p {
+    margin-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #4a4a4a;
+    letter-spacing: 0.6px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  #price {
+    padding: 50px 0px;
+  }
+  
+  
+  #price h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(0, 136, 232, 1);
+    
+    line-height: 28px;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+  }
+  
+  
+  .price-item {
+    padding: 40px 30px;
+    background: #fff;
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border: 2px solid rgba(0, 136, 232, 1);
+  }
+  
+  .price-item:hover .price-content .price-info {
+    margin-left: 30px;
+  }
+  
+  .price-item i {
+    display: block;
+    margin-left: 25px;
+    margin-top: 25px;
+    font-size: 30px;
+    color: #4E47DE;
+    text-align: center;
+  }
+  
+  .price-item {
+    height: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    margin-left: 0px;
+    float: left;
+  }
+  
+  .price-item .price-content {
+    text-align: left;
+    overflow: hidden;
+  }
+  
+  .price-item .price-content .price-info {
+    float: left;
+    margin-left: 20px;
+    margin-top: 8px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .price-title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.4;
+    padding-bottom: 30px;
+    border-bottom: 2px dashed #ccc;
+  }
+  
+  .price-num{
+    display: flex;
+    gap: 5px;
+    align-items: baseline;
+    justify-content: center;
+  }
+  
+  .price-price{
+    font-size: 80px !important;
+    
+  }
+  
+  .price-item .price-content .price-info .user-name {
+    display: block;
+    font-weight: 400;
+    font-size: 17px;
+    color: #1e1e1e;
+    letter-spacing: 0.25px;
+    margin-bottom: 5px;
+  }
+  
+  .price-item .price-info span {
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(0, 136, 232, 1);
+    letter-spacing: 0.25px;
+    text-align: center;
+  }
+  
+  .price-item .price-content p {
+    margin-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #4a4a4a;
+    letter-spacing: 0.6px;
+    line-height: 30px;
+  }
+}
