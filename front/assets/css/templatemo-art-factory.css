@@ -3062,4 +3062,10 @@ price
     letter-spacing: 0.6px;
     line-height: 30px;
   }
+
+  .price-space {
+        display: block;
+        height: 50px;
+        width: 100%; /* 幅も指定して要素が認識されるようにする */
+  }
 }
